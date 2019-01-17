@@ -1,8 +1,19 @@
-﻿// Learn more about F# at http://fsharp.org
+﻿namespace MovieLensQL.Server
 
-open System
+open Microsoft.AspNetCore
+open Microsoft.AspNetCore.Hosting
 
-[<EntryPoint>]
-let main argv =
-    printfn "Hello World from F#!"
-    0 // return an integer exit code
+module Program =
+    let exitCode = 0
+
+    let BuildWebHost args =
+        WebHost
+            .CreateDefaultBuilder(args)
+            .UseStartup<Startup>()
+            .UseUrls("http://localhost:8084")
+            .Build()
+
+    [<EntryPoint>]
+    let main args =
+        BuildWebHost(args).Run()
+        exitCode
