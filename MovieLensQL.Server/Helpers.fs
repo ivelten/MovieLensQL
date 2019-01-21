@@ -6,8 +6,6 @@ open Newtonsoft.Json
 open Newtonsoft.Json.Linq
 open Newtonsoft.Json.Serialization
 open System.Collections.Generic
-open Microsoft.FSharp.Linq.RuntimeHelpers
-open System.Linq.Expressions
 
 [<AutoOpen>]
 module Helpers =

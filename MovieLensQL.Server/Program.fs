@@ -1,5 +1,6 @@
 ﻿namespace MovieLensQL.Server
 
+open MovieLensQL.Server.Data
 open Microsoft.AspNetCore
 open Microsoft.AspNetCore.Hosting
 
